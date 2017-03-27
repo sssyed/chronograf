@@ -6,6 +6,7 @@ import UserEditingRow from 'src/admin/components/UserEditingRow'
 import MultiSelectDropdown from 'shared/components/MultiSelectDropdown'
 import ConfirmButtons from 'src/admin/components/ConfirmButtons'
 import DeleteRow from 'src/admin/components/DeleteRow'
+import ChangePassRow from 'src/admin/components/ChangePassRow'
 
 const UserRow = ({
   user: {name, roles, permissions},
@@ -68,6 +69,9 @@ const UserRow = ({
               onApply={handleUpdatePermissions}
             /> : null
         }
+      </td>
+      <td className="text-right" style={{width: "200px"}}>
+        <ChangePassRow onEdit={onEdit} onSave={onSave} user={user} />
       </td>
       <td className="text-right" style={{width: "85px"}}>
         <DeleteRow onDelete={onDelete} item={user} />
