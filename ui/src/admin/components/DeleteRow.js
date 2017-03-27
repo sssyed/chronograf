@@ -5,7 +5,7 @@ import ConfirmButtons from 'src/admin/components/ConfirmButtons'
 
 const DeleteButton = ({onConfirm}) => (
   <button
-    className="btn btn-xs btn-danger admin-table--delete"
+    className="btn btn-xs btn-danger admin-table--hidden"
     onClick={onConfirm}
   >
     Delete
